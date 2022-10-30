@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Vue-Cestas</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://kit.fontawesome.com/27305ed8dd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script> 
+
+</head>
+<body>
+    <div id="app">
+        <div class="nav-bar"></div>
+
+        <div class="cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i> {{cart}}</div>
+        <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+ 
+    </div>
+    <!-- importa app-->
+    <script src="./main.js"></script>
+
+    <!-- importa Componente-->
+    <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+    <!-- Montar app -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>
